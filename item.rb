@@ -10,11 +10,11 @@ class Item
   end
 
   def title_words_count
-    @title.split(' ').count
+    @title.split(/[\s']/).count
   end
 
   def to_s
-    "##{@rank} - #{@title} - score : #{@score} - comments : #{@comments_number}"
+    "##{@rank} - #{@title} - (#{title_words_count}) - score : #{@score} - comments : #{@comments_number}, "
   end
 
   private
